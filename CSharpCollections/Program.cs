@@ -1,33 +1,13 @@
-﻿//var colors = new List<string>();
-//List<string> colors = new List<string>();
-List<string> colors = new();
+﻿var stds = new Dictionary<string, string>();
 
-Console.WriteLine($"Count: {colors.Count}");
+stds.Add("120210003", "Ahmad");
+stds.Add("120210002", "Omar");
+stds.Add("120210005", "Saleem");
+stds.Add("120210004", "Ali");
+stds.Add("120210001", "Hamza");
 
-colors.Add("RED");
-colors.Add("GREEN");
-colors.Add("BLUE");
-colors.Add("YELLOW");
-colors.Add("WHITE");
-colors.Add("BLACK");
-
-Console.WriteLine($"Count: {colors.Count}");
-
-Console.WriteLine("---------------------------------------------");
-for (var i = 0; i < colors.Count; i++)
+foreach (var std in stds)
 {
-    Console.WriteLine(colors[i]);
+    Console.WriteLine($"{std.Key}: {std.Value}");
 }
 
-// Updating a list item
-colors[3] = "BROWN";
-
-// Removing an element
-colors.RemoveAt(4);
-
-
-Console.WriteLine("---------------------------------------------");
-for (var i = 0; i < colors.Count; i++)
-{
-    Console.WriteLine(colors[i]);
-}
